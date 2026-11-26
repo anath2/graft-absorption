@@ -1,0 +1,17 @@
+# GRAFT clone (data_prep.py) and run outputs
+data/raw/
+results/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Credentials and local config
+.env
+.env.*
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

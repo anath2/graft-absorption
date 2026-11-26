@@ -1,0 +1,17 @@
+[project]
+name = "graft-absorption"
+version = "0.1.0"
+description = "Does gradient routing (GRAFT) remove reward hacks its monitor never catches?"
+readme = "README.md"
+license = "MIT"
+# Local side only. The GPU side runs in GRAFT's own Python 3.11 image (gpu.py).
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "modal>=1.1",          # remote GPU runs
+    "python-dotenv>=1.0",  # credentials.py reads HF_TOKEN from a .env
+    "transformers>=4.50",  # tokenizer for the base-rate analysis
+]
+
+[tool.uv]
+# Plain scripts, not an installable package.
+package = false
